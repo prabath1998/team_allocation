@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Header = () => {
+const Header = ({ selectedTeam, teamMemberCount }) => {
   return (
-    <header>
-      <h1 className='p-5 bg-dark text-white'>Header</h1>
+    <header className="container">
+      <div className="row justify-content-center">
+        <div className="col-8">
+          <h1>Team Member Allocation</h1>
+          <h3>
+            {selectedTeam} has {teamMemberCount} members
+          </h3>
+        </div>
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
